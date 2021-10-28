@@ -99,7 +99,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		s1_len++;
 	while (s2[s2_len])
 		s2_len++;
-	str = (char *)malloc((sizeof(char) * (s1_len + s2_len + 1));
+	str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!str)
 		return (NULL);
 	ft_strlcpy(str, s1, s1_len + 1);
