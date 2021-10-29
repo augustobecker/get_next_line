@@ -1,6 +1,6 @@
 #include "get_next_line.h"
 
-char	*ft_strchr(const char *str, int argument)
+char	*gnl_strchr(const char *str, int argument)
 {
 	int	i;
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *str, int argument)
 	return ((void *) 0);
 }
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
+size_t	gnl_strlcpy(char *dest, const char *src, size_t destsize)
 {
 	size_t	i;
 	size_t	src_length;
@@ -36,7 +36,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	return (src_length);
 }
 
-char	*ft_strdup(char *src)
+char	*gnl_strdup(char *src)
 {
 	size_t	i;
 	size_t	len;
@@ -60,7 +60,7 @@ char	*ft_strdup(char *src)
 	return (dup);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*gnl_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	substr_length;
 	size_t	s_length;
@@ -80,14 +80,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 			substr = (char *) malloc(sizeof(char) * (substr_length + 1));
 		if (!substr)
 			return (NULL);
-		ft_strlcpy(substr, &s[start], len + 1);
+		gnl_strlcpy(substr, &s[start], len + 1);
 	}
 	else
-		substr = ft_strdup("");
+		substr = gnl_strdup("");
 	return (substr);
 }
 
-char	*ft_strjoin(const char *s1, const char *s2)
+char	*gnl_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
 	size_t 	s1_len;
@@ -102,7 +102,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	str = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!str)
 		return (NULL);
-	ft_strlcpy(str, s1, s1_len + 1);
-	ft_strlcpy(&str[s1_len], s2, s1_len + s2_len + 1);
+	gnl_strlcpy(str, s1, s1_len + 1);
+	gnl_strlcpy(&str[s1_len], s2, s1_len + s2_len + 1);
 	return (str);
 }
