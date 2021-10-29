@@ -43,7 +43,7 @@ static int read_line(int fd, char **buffer, char **backup, char **line)
 	}
 	free_ptr(buffer);
 	*backup = get_line(backup, line);
-	if (!(**line)) //
+	if (!(**line))
 		free_ptr(line);
 	return (bytes_read);
 }
