@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/29 11:44:15 by acesar-l          #+#    #+#             */
+/*   Updated: 2021/10/29 12:07:11 by acesar-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 char	*gnl_strchr(const char *str, int argument)
@@ -90,8 +102,8 @@ char	*gnl_substr(char const *s, unsigned int start, size_t len)
 char	*gnl_strjoin(const char *s1, const char *s2)
 {
 	char	*str;
-	size_t 	s1_len;
-	size_t 	s2_len;
+	size_t	s1_len;
+	size_t	s2_len;
 
 	s1_len = 0;
 	s2_len = 0;
