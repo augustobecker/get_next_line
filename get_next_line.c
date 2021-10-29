@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: acesar-l <acesar-l@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/10/29 11:41:08 by acesar-l          #+#    #+#             */
+/*   Updated: 2021/10/29 12:09:57 by acesar-l         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line.h"
 
 static void	free_ptr(char **ptr)
@@ -6,9 +18,9 @@ static void	free_ptr(char **ptr)
 	*ptr = NULL;
 }
 
-static char *get_line(char **backup, char **line)
+static char	*get_line(char **backup, char **line)
 {
-	char 	*next_backup;
+	char	*next_backup;
 	int		i;
 
 	i = 0;
@@ -27,10 +39,10 @@ static char *get_line(char **backup, char **line)
 	return (next_backup);
 }
 
-static int read_line(int fd, char **buffer, char **backup, char **line)
+static int	read_line(int fd, char **buffer, char **backup, char **line)
 {
-	int 	bytes_read;
-	char 	*temporary;
+	int		bytes_read;
+	char	*temporary;
 
 	bytes_read = 1;
 	while (!gnl_strchr(*backup, '\n') && bytes_read)
@@ -48,10 +60,10 @@ static int read_line(int fd, char **buffer, char **backup, char **line)
 	return (bytes_read);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *buffer_backup = NULL;
-	char 		*buffer;
+	static char	*buffer_backup = NULL;
+	char		*buffer;
 	char		*line;
 
 	if (fd < 0 || fd >= 1024 || BUFFER_SIZE <= 0 )
