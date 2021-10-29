@@ -18,11 +18,11 @@ static char *get_line(char **backup, char **line)
 	if (*(*backup + i) == '\n')
 	{
 		i++;
-		*line = ft_substr(*backup, 0, i);
-		next_backup = ft_strdup(*backup + i);
+		*line = gnl_substr(*backup, 0, i);
+		next_backup = gnl_strdup(*backup + i);
 	}
 	else
-		*line = ft_strdup(*backup);
+		*line = gnl_strdup(*backup);
 	free_ptr(backup);
 	return (next_backup);
 }
@@ -33,12 +33,12 @@ static int read_line(int fd, char **buffer, char **backup, char **line)
 	char 	*temporary;
 
 	bytes_read = 1;
-	while (!ft_strchr(*backup, '\n') && bytes_read)
+	while (!gnl_strchr(*backup, '\n') && bytes_read)
 	{
 		bytes_read = read(fd, *buffer, BUFFER_SIZE);
 		(*buffer)[bytes_read] = '\0';
 		temporary = *backup;
-		*backup = ft_strjoin(temporary, *buffer);
+		*backup = gnl_strjoin(temporary, *buffer);
 		free(temporary);
 	}
 	free_ptr(buffer);
@@ -65,7 +65,7 @@ char *get_next_line(int fd)
 		return (NULL);
 	}
 	if (!buffer_backup)
-		buffer_backup = ft_strdup("");
+		buffer_backup = gnl_strdup("");
 	if (!read_line(fd, &buffer, &buffer_backup, &line) && !line)
 		return (NULL);
 	return (line);
