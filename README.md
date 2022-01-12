@@ -4,15 +4,17 @@
 
 ## Index
 
-* [What is get-next-line?](#what-is-get-next-line?)
+* [What is get-next-line?](#what-is-get-next-line)
 * [How does it work?](#how-does-it-work)
-* [How do I use the library?](#how-do-i-use-the-library)
+* [How do I use the function?](#how-do-i-use-the-function)
 * [How do I test it?](#how-do-i-test-it)
 
 ## What is get-next-line?
 
+It's the second 42 project. A function that returns a line, read from a file descriptor.
+
 ## How does it work?
 
-## How do I use the library?
+## How do I use the function?
 
 ## How do I test it?
