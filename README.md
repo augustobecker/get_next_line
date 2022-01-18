@@ -1,5 +1,7 @@
 <h1 align="center"> get_next_line - @42sp </h1>
 
+<p align="center">:information_source: A C function that reads any valid file line by line until the end </p>
+
 ![getnext](https://user-images.githubusercontent.com/81205527/149212588-45d60d10-2e78-46c5-bf0c-0dc247464ad5.png)
 
 ## Index
