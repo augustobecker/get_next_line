@@ -18,7 +18,7 @@ It's the second project at 42. A function, in C, that returns a line, read from 
 
 <h2 align="center" id="requirements"> Requirements </h2>
 
-<p  align="center"> :warning: The project must be written in accordance with the Norm </p>
+<p  align="center"> :warning: The project must be written in accordance with the <a href="https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf" target="_blank">Norm</a> </p>
 The Norm  is a programming standard that defines a set of rules to follow when writing code at 42. It applies to all C projects within the Common Core by default, and
 to any project where it's specified. These are some of them:
 
@@ -35,8 +35,6 @@ to any project where it's specified. These are some of them:
   The norminette (as we call the norm at 42) is in python and open source.
   
   Its repository is available at https://github.com/42School/norminette.
-
-  And it can be read in this pdf at https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf
   
 
 <h2 align="center" id="how-does-it-work"> How does it work? </h2>
