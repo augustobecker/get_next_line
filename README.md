@@ -13,6 +13,7 @@
 * [How does it work?](#how-does-it-work)
 * [How do I use the function?](#how-do-i-use-the-function)
 * [How do I test it?](#how-do-i-test-it)
+* [Author](#author)
 
 <h2 align="center" id="what-is-get-next-line"> What is get-next-line? </h2>
 
@@ -66,3 +67,18 @@ The 4 characters remaining after the line break would be lost and reading would 
 <h2 align="center" id="how-do-i-use-the-function"> How do I use the function? </h2>
 
 <h2 align="center" id="how-do-i-test-it"> How do I test it? </h2>
+
+<h2 align="center" id="author"> Author </h2>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png"> </p>
+<p align="center"><strong> Augusto Becker | acesar-l | 🇧🇷👨‍🚀</strong></p>
+<p align="center"> :wave: How to reach me: </p>
+
+<div>
+  <p align="center"><a href = "mailto:augustobecker.dev@gmail.com"><img src="https://img.shields.io/badge/augustobecker.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"> </a></p>
+  <p align="center"><a href="https://www.linkedin.com/in/augusto-becker/" target="_blank"><img src="https://img.shields.io/badge/-Augusto Becker-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> </p>
+  <p align="center"><a href="https://www.instagram.com/augusto.becker/" target="_blank"><img src="https://img.shields.io/badge/-augusto.becker-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a></p>
+</div>
+
+    
+    
