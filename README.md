@@ -61,9 +61,7 @@ to any project where it's specified. These are some of them:
 <p align="center">ℹ️ A static variable is allocated "statically", which means its lifetime is the entire execution of the program.</p>
 
 The line is, by definition, a string ending in "\n" (line break) or "EOF" (to the end of the file) and which, according to the subject, must be read in a buffer of a size defined in the compilation. get_next_line runs the read function and stores what was read during the call, only then it looks for a "\n" - when it finds it we know we've reached the end of the line, if it doesn't find the "\n" but read returns 0 we know that there is nothing ahead to be read (EOF), in other cases, we simply do not reach the end of the line, what was read is stored in the line that will be returned and we continue reading the file. Most of the time, the buffer does not match the exact size of the line, and it is also not possible to read the same stretch of the line two times, which creates one of the biggest problems in the development of get_next_line:
-
-    What happens in those cases where, for example, the BUFFER_SIZE is 10 and the line ends at the 6th character?
-
+What happens in those cases where, for example, the BUFFER_SIZE is 10 and the line ends at the 6th character?
 The 4 characters remaining after the line break would be lost and reading would continue into the next 10 character buffer. To solve this, we use the static variable as a backup, to store those leftover characters. And when the function is called again, one of the first things done is to check if there is anything in the backup and if there is, start the new line from there. In general this is how it works, other details of how it works are more technical and I thought it best to leave them out of this explanation, but you can check it out by checking the <a href="https://github.com/augustobecker/get_next_line/blob/main/get_next_line.c">function</a>.
 <h2 align="center" id="how-do-i-use-the-function"> How do I use the function? </h2>
 
@@ -71,15 +69,15 @@ The 4 characters remaining after the line break would be lost and reading would 
 
 <h2 align="center" id="author"> Author </h2>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png"> </p>
-<p align="center"><strong> Augusto Becker | acesar-l | 🇧🇷👨‍🚀</strong></p>
-<p align="center"> :wave: How to reach me: </p>
-
 <div>
-  <p align="center"><a href = "mailto:augustobecker.dev@gmail.com"><img src="https://img.shields.io/badge/augustobecker.dev@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"> </a></p>
-  <p align="center"><a href="https://www.linkedin.com/in/augusto-becker/" target="_blank"><img src="https://img.shields.io/badge/-Augusto Becker-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> </p>
-  <p align="center"><a href="https://www.instagram.com/augusto.becker/" target="_blank"><img src="https://img.shields.io/badge/-augusto.becker-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a></p>
+<img height="180em" src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png">
+    
+<strong> Augusto Becker | acesar-l | 🇧🇷👨‍🚀</strong>
+    
+:wave: How to reach me: 
+    
+  <a href="https://www.linkedin.com/in/augusto-becker/" target="_blank"><img align="center" alt="LinkedIn" height="60" src="https://user-images.githubusercontent.com/81205527/157161849-01a9df02-bf32-45be-add4-122bc40b48cf.png"></a>
+<a href="https://www.instagram.com/augusto.becker/" target="_blank"><img align="center" alt="Instagram" height="60" src="https://user-images.githubusercontent.com/81205527/157161841-19ec3ab2-2c8f-4ec0-8b9d-3cd885256098.png"></a>
+<a href = "mailto:augustobecker.dev@gmail.com"> <img align="center" alt="Gmail - augustobecker.dev@gmail.com" height="60" src="https://user-images.githubusercontent.com/81205527/157161831-eb9dffee-404b-4ffe-b0af-34671219f7fb.png"></a>
+<a href="https://discord.gg/3kxYkBRxUy" target="_blank"><img align="center" alt="Discord - beckerzz#3614" height="60" src="https://user-images.githubusercontent.com/81205527/157161820-de88dc63-61a3-4c9f-9445-07ac98bf0bc2.png"></a>
 </div>
-
-    
-    
