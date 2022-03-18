@@ -65,6 +65,40 @@ What happens in those cases where, for example, the BUFFER_SIZE is 10 and the li
 The 4 characters remaining after the line break would be lost and reading would continue into the next 10 character buffer. To solve this, we use the static variable as a backup, to store those leftover characters. And when the function is called again, one of the first things done is to check if there is anything in the backup and if there is, start the new line from there. In general this is how it works, other details of how it works are more technical and I thought it best to leave them out of this explanation, but you can check it out by checking the <a href="https://github.com/augustobecker/get_next_line/blob/main/get_next_line.c">function</a>.
 <h2 align="center" id="how-do-i-use-the-function"> How do I use the function? </h2>
 
+It aims to create a library called libgetnextline.a from the source files.
+To create this library, clone the project:
+
+    git clone https://github.com/augustobecker/get_next_line get_next_line
+Enter the repository:
+
+    cd get_next_line
+
+Run these commands to compile the source code to object files:
+    
+    clang -Wall -Werror -Wextra -c get_next_line.c -o get_next_line.o 
+    clang -Wall -Werror -Wextra -c get_next_line_utils.c -o get_next_line_utils.o 
+
+And then creating the library libgetnextline.a:
+    
+    ar -rcs libgetnextline.a get_next_line.o get_next_line_utils.o 
+
+You should see a libftprintf.a file and some object files (.o).
+
+Now to clean up (removing the .o files), run this command:
+
+    rm -f get_next_line.o get_next_line_utils.o 
+Now you just have to add this header at your .c files and use the ft_printf function or any other from the library:
+
+	#include "get_next_line.h"
+	
+If you try to compile your .c files with clang using "clang example.c" you will get an undefined symbol error for libgetnextline functions.
+
+You have to tell the file which library it's using:
+
+	clang example.c libgetnextline.a
+	
+That's it. Now run it using ./a.out
+
 <h2 align="center" id="how-do-i-test-it"> How do I test it? </h2>
 
 To test the code we're going to be using @jgambard's gnlTester. There are some good others but I'll only be covering this one.
