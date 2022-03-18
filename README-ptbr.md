@@ -73,7 +73,54 @@ No geral é assim que ela funciona, outros detalhes de funcionamento são mais t
 a <a href="https://github.com/augustobecker/get_next_line/blob/main/get_next_line.c">função</a>.
 
 <h2 align="center" id="como-eu-uso-a-funcao"> Como eu uso a Função? </h2>
+O objetivo é criar uma bilioteca chamada libgetnextline.a feita com os arquivos fonte.
 
+Para criar a biblioteca, clone o projeto:
+
+    git clone https://github.com/augustobecker/get_next_line get_next_line
+Entre no repositório:
+
+    cd get_next_line
+Rode esse comandos para transformar os arquivos em objetos:
+    
+    clang -Wall -Werror -Wextra -c get_next_line.c -o get_next_line.o 
+    clang -Wall -Werror -Wextra -c get_next_line_utils.c -o get_next_line_utils.o 
+
+E esse outro para criar a biblioteca
+    
+    ar -rcs libgetnextline.a get_next_line.o get_next_line_utils.o 
+
+Você deve ver um arquivo libgetnextline.a e alguns arquivos objeto (.o).
+
+Você pode remover os arquivos .o
+
+    rm -f get_next_line.o get_next_line_utils.o 
+Agora, só precisa adicionar esse cabeçalho nos seus arquivos .c e usar as funções da libgetnextline:
+
+    #include "get_next_line.h"
+Se tentar compilar seus arquivos com clang usando "clang exemplo.c" vai receber um erro de undefined symbol para as funções da biblioteca.
+
+Você deve mostrar qual é a biblioteca:
+
+    clang exemplo.c libgetnextline.a
+
+É isso, agora basta executar com ./a.out
+    
+Agora, se estiver buscando uma forma de utilizar essa função, aqui vai uma demonstração prática:
+    
+	    read_str = ft_strdup(get_next_line(map->fd));
+	    str = ft_strdup("");
+	    while (read_str)
+	    {
+		    str = ft_strjoin(temporary, read_str);
+		    read_str = get_next_line(map->fd);
+	    }
+
+A saída da get_next_line (uma linha) é colocada dentro da string read_str, usando strdup para alocar espaço para ela.
+Dentro um while ela é chamada de novo e só vai parar quando read_str se tornar uma string nula (quando a get_next_line retornar um nulo no fim do arquivo).
+Enquanto isso, esse valor vai sendo passado para a string str e concatenado(usando a ft_strjoin) com a próxima linha a cada rodada do while.
+Ao fim, todo o conteúdo do arquivo vai estar dentro da string str.
+    
 <h2 align="center" id="como-eu-testo"> Como eu testo? </h2>
     
 Para testar o código vamos usar um Tester para a get_next_line feito pelo @jgambard. Há vários outros bons testers mas hoje vou cobrir apenas esse.
