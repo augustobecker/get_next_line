@@ -65,9 +65,7 @@ na compilação. A get_next_line roda a função read e guarda o que foi lido du
 caso não encontre o "\n" mas o read retorne 0 sabemos que não tem nada à frente para ser lido (EOF), nos outros casos, simplesmente não chegamos ao final da linha, o que foi 
 lido é armazenado na linha que vai ser retornada e seguimos na leitura do arquivo. Na maioria das vezes o buffer não condiz com o tamanho exato da linha,
 e também não é possível reler o mesmo trecho da linha, o que gera um dos maiores problemas no desenvolvimento da get_next_line:
-
-    O que aconteceria nesses casos em que, por exemplo, o BUFFER_SIZE é de 10 caracteres e a linha acaba no 6º caracter?
-
+O que aconteceria nesses casos em que, por exemplo, o BUFFER_SIZE é de 10 caracteres e a linha acaba no 6º caracter?
 Os 4 caracteres restantes após a quebra de linha seriam perdidos e a leitura continuaria no próximo buffer de 10 caracteres.
 Para resolver isso, usamos a variável estática como um backup, para guardar esses caracteres que sobram.
 E quando a função é chamada novamente, uma das primeiras coisas feitas é checar se há algo no backup e se houver, começar a nova linha a partir dali.
@@ -78,6 +76,27 @@ a <a href="https://github.com/augustobecker/get_next_line/blob/main/get_next_lin
 
 <h2 align="center" id="como-eu-testo"> Como eu testo? </h2>
     
+Para testar o código vamos usar um Tester para a get_next_line feito pelo @jgambard. Há vários outros bons testers mas hoje vou cobrir apenas esse.
+
+Para testar o código desse repositório:
+Clone o repositório e entre nele:
+
+    git clone https://github.com/augustobecker/get_next_line get_next_line
+      
+    cd get_next_line/
+ 
+Agora, clone o gnlTester do @jgambard
+    
+    git clone https://github.com/Tripouille/gnlTester Tester_get_next_line
+Entre na pasta do Tester e rode o teste mandatório:
+
+    cd Tester_get_next_line
+    make m
+    
+Se você fez tudo corretamente, deve ver algo como isso:   
+    
+![68747470733a2f2f692e696d6775722e636f6d2f75344c6936414d2e706e67](https://user-images.githubusercontent.com/81205527/158914684-a53f2bf1-7a7a-4155-944f-7863ddb09855.png)
+
  <h2 align="center" id="autor"> Autor </h2>
 <div>
     <img height="180em" src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png">
