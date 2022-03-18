@@ -67,6 +67,27 @@ The 4 characters remaining after the line break would be lost and reading would 
 
 <h2 align="center" id="how-do-i-test-it"> How do I test it? </h2>
 
+To test the code we're going to be using @jgambard's gnlTester. There are some good others but I'll only be covering this one.
+
+To test the code in this repo
+Clone this repo and cd into it:
+
+    git clone https://github.com/augustobecker/get_next_line get_next_line
+     
+	cd get_next_line/	
+ 
+Now, clone @jgambard's gnlTester
+    
+    https://github.com/Tripouille/gnlTester Tester_get_next_line
+Go into the test folder and run the mandatory test:
+
+    cd Tester_get_next_line
+    make m
+    
+If you did everything correctly you should see something like this:
+![68747470733a2f2f692e696d6775722e636f6d2f75344c6936414d2e706e67](https://user-images.githubusercontent.com/81205527/158914684-a53f2bf1-7a7a-4155-944f-7863ddb09855.png)
+
+    
 <h2 align="center" id="author"> Author </h2>
 
 <div>
