@@ -14,6 +14,7 @@
 * [How does it work?](#how-does-it-work)
 * [How do I use the function?](#how-do-i-use-the-function)
 * [How do I test it?](#how-do-i-test-it)
+* [42 Cursus](#42-cursus)
 * [Author](#author)
 
 <h2 align="center" id="what-is-get-next-line"> What is get-next-line? </h2>
@@ -121,6 +122,9 @@ Go into the test folder and run the mandatory test:
 If you did everything correctly you should see something like this:
 ![68747470733a2f2f692e696d6775722e636f6d2f75344c6936414d2e706e67](https://user-images.githubusercontent.com/81205527/158914684-a53f2bf1-7a7a-4155-944f-7863ddb09855.png)
 
+<h2 align="center" id="42-cursus"> 42 Cursus </h2>
+	
+You can see other projets at 42 here: <a href="https://github.com/augustobecker/42cursus">42 Cursus </a>
     
 <h2 align="center" id="author"> Author </h2>
 
