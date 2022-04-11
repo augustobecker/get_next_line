@@ -14,6 +14,7 @@
 * [Como funciona?](#como-funciona)
 * [Como eu uso a Função?](#como-eu-uso-a-funcao)
 * [Como eu testo?](#como-eu-testo)
+* [42 Cursus](#42-cursus)
 * [Autor](#autor)
 
 <h2 align="center" id="o-que-e-get-next-line"> O que é get-next-line? </h2>
@@ -144,6 +145,25 @@ Se você fez tudo corretamente, deve ver algo como isso:
     
 ![68747470733a2f2f692e696d6775722e636f6d2f75344c6936414d2e706e67](https://user-images.githubusercontent.com/81205527/158914684-a53f2bf1-7a7a-4155-944f-7863ddb09855.png)
 
+<h2 align="center" id="42-cursus"> 42 Cursus </h2>
+    
+A 42 é uma iniciativa educacional global que propõe uma nova forma de aprender tecnologia: sem professores, sem salas de aula,
+estudantes aprendendo com seus colegas estudantes (Aprendizado peer to peer),
+com uma metodologia que desenvolve habilidades de computação e da vida.
+Sem mencionar que é completamente gratuita e aberta para todos, sem pré-requisitos. 
+    
+As admissões na 42 são diferentes de outras escolas. Usamos um processo de admissão baseado em mérito.
+O passo final no processo é a Piscina - parte parte do processo seletivo que requer 4 semanas de código intenso e imersivo.
+Não é necessário experiência anterior em programação.
+    
+Você pode conferir mais sobre o processo de admissão no site da 42sp: https://www.42sp.org.br
+    
+ou no meu repositório do github: <a href="https://github.com/augustobecker/42sp_Piscine">42 Piscine</a>
+
+Para ver outros projetos da 42 desenvolvidos por mim, clique aqui: <a href="https://github.com/augustobecker/42cursus">42 Cursus </a>
+
+    
+	
  <h2 align="center" id="autor"> Autor </h2>
 <div>
     <img height="180em" src="https://user-images.githubusercontent.com/81205527/152089472-0aa06bd9-d882-4c83-adfc-8230d1e958c1.png">
