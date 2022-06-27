@@ -108,19 +108,26 @@ Você deve mostrar qual é a biblioteca:
 É isso, agora basta executar com ./a.out
     
 Agora, se estiver buscando uma forma de utilizar essa função, aqui vai uma demonstração prática:
-    
-	    read_str = ft_strdup(get_next_line(map->fd));
-	    str = ft_strdup("");
-	    while (read_str)
-	    {
-		    str = ft_strjoin(temporary, read_str);
-		    read_str = get_next_line(map->fd);
-	    }
+    	
+	char	*full_file;
+	char	*line_temp;
+	int	file_fd
+	
+	file_fd = open(argv, O_RDONLY);
+	if (file_fd == -1)
+		ft_error_msg("The Map couldn't be opened. Invalid fd");
+	full_file = ft_strdup("");
+	while (true)
+	{
+		full_file = get_next_line(file_fd);
+		if (line_temp == 0)
+			break ;
+		full_file(full_file, line_temp);
+		free(line_temp);
+	}
+	close(file_fd);
+	return (full_file);
 
-A saída da get_next_line (uma linha) é colocada dentro da string read_str, usando strdup para alocar espaço para ela.
-Dentro um while ela é chamada de novo e só vai parar quando read_str se tornar uma string nula (quando a get_next_line retornar um nulo no fim do arquivo).
-Enquanto isso, esse valor vai sendo passado para a string str e concatenado(usando a ft_strjoin) com a próxima linha a cada rodada do while.
-Ao fim, todo o conteúdo do arquivo vai estar dentro da string str.
     
 <h2 align="center" id="como-eu-testo"> Como eu testo? </h2>
     
