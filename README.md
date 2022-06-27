@@ -83,12 +83,12 @@ And then creating the library libgetnextline.a:
     
     ar -rcs libgetnextline.a get_next_line.o get_next_line_utils.o 
 
-You should see a libftprintf.a file and some object files (.o).
+You should see a libgetnextline.a file and some object files (.o).
 
 Now to clean up (removing the .o files), run this command:
 
     rm -f get_next_line.o get_next_line_utils.o 
-Now you just have to add this header at your .c files and use the ft_printf function or any other from the library:
+Now you just have to add this header at your .c files and use the get_next_line function or any other from the library:
 
 	#include "get_next_line.h"
 	
