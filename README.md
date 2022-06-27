@@ -100,6 +100,28 @@ You have to tell the file which library it's using:
 	
 That's it. Now run it using ./a.out
 
+Now, if you're looking for a way to use this function, here's a practical demonstration:
+    	
+	char	*full_file;
+	char	*line_temp;
+	int	file_fd
+	
+	file_fd = open(argv, O_RDONLY);
+	if (file_fd == -1)
+		ft_error_msg("The Map couldn't be opened. Invalid fd");
+	full_file = ft_strdup("");
+	while (true)
+	{
+		full_file = get_next_line(file_fd);
+		if (line_temp == 0)
+			break ;
+		full_file(full_file, line_temp);
+		free(line_temp);
+	}
+	close(file_fd);
+	return (full_file);
+
+
 <h2 align="center" id="how-do-i-test-it"> How do I test it? </h2>
 
 To test the code we're going to be using @jgambard's gnlTester. There are some good others but I'll only be covering this one.
